@@ -1,4 +1,4 @@
-const LIST_URL = "https://api.npoint.io/d320ff9b8570a1f1c8fe";
+const LIST_URL = "https://maxi192655.github.io/Grupal-05--08/Juegos.json";
 
 var getJSONData = function (url) {
     var result = {};
