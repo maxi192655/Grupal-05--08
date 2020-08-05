@@ -1,4 +1,4 @@
-const LIST_URL = "https://maxi192655.github.io/Grupal-05--08/Juegos.json";
+const juegos_URL = "https://maxi192655.github.io/Grupal-05--08/Juegos.json";
 
 var getJSONData = function (url) {
     var result = {};
