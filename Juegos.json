@@ -4,24 +4,27 @@
         "name": " : valorant",
         "pegi": " : +12",
         "precio": " : gratis!",
-        "imgSrc": "valorant.jpg"
+        "imgSrc": "Valortan.jpg"
     },
     {
         "id": " : 2",
         "name": " : World of Warcraft",
         "pegi": " : +12",
-        "precio": " : 1500$"
+        "precio": " : 1500$",
+        "imgSrc": "wow.jpg"
     },
     {
         "id": " : 3",
         "name": " : Dead by daylight",
         "pegi": " : +18",
-        "precio": " : 600$"
+        "precio": " : 600$",
+        "imgSrc": "dbd.jpg"
     },
     {
         "id": " : 4",
         "name": " : League of legend",
         "pegi": " : +15",
-        "precio": " : gratis!"
+        "precio": " : gratis!",
+        "imgSrc": "lolimg.jpg"
     }
 ]
