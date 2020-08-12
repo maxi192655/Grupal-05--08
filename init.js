@@ -1,4 +1,5 @@
 const juegos_URL = "https://maxi192655.github.io/Grupal-05--08/Juegos.json";
+const user_URL ="https://danielk2020.github.io/biblioteca/usuarios.json"
 
 var getJSONData = function (url) {
     var result = {};
