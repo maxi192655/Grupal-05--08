@@ -1,12 +1,10 @@
-*{
-    background-color: seagreen;
-}
 h1{
     text-align: center;
     font-size: 2,5em;
     color: red;
 }
-div{
-    font-size: 1,5em;
+div#principal{
+    font-size: 1.5em;
     text-align: justify ;
+    background-color: sienna;
 }

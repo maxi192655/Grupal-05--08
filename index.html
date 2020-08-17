@@ -9,11 +9,28 @@
 </head>
 
 <body>
-    <h1>Steamex</h1>
-    <div id="lista"></div>
-    <script src="login.js"></script>
-    <script src="Juegos.js"></script>
-    <script src="init.js"></script>
+    <div id="filtro-rango-precio">
+        <p>Ingrese de precio</p>
+
+        <input type="number" placeholder="min." id="rango-min"> <br> <br>
+
+        <input type="number" placeholder="max" id="rango-max"> <br> <br>
+
+        <button id="filtrar">Filtrar</button>
+        <button id="limpiar">Limpiar</button>
+
+    </div>
+
+    <br>
+    <br>
+
+    <div id="principal">
+        <h1>Steamex</h1>
+        <div id="lista"></div>
+        <script src="login.js"></script>
+        <script src="Juegos.js"></script>
+        <script src="init.js"></script>
+    </div>
 </body>
 
 </html>

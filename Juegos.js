@@ -1,17 +1,27 @@
 var juegosArray = [];
 
+var minPrice = undefined;
+var maxPrice = undefined;
+
 function showJuegos(array) {
 
     let contenido = "";
     for (let i = 0; i < array.length; i++) {
         let juego = array[i];
 
-        contenido += 'id' + juego.id + '<br>'
-        contenido += 'name' + juego.name + '<br>'
-        contenido += 'pegi' + juego.pegi + '<br>'
-        contenido += 'precio' + juego.precio + '<br>'
-        contenido += 'img' + juego.imgSrc + '<br>'
-        contenido += '<br><hr><br>';
+        if (((minPrice == undefined) || (minPrice != undefined && parseInt(juego.precio) >= minPrice)) &&
+            ((maxPrice == undefined) || (maxPrice != undefined && parseInt(juego.precio) <= maxPrice))) {
+
+            contenido += 'id' + juego.id + '<br>'
+            contenido += 'name' + juego.name + '<br>'
+            contenido += 'pegi' + juego.pegi + '<br>'
+            contenido += 'precio' + juego.precio + '<br>'
+            contenido += 'img' + juego.imgSrc + '<br>'
+            contenido += '<br><hr><br>';
+
+        }
+
+
 
         document.getElementById("lista").innerHTML = contenido;
     }
@@ -26,3 +36,25 @@ document.addEventListener("DOMContentLoaded", function (e) {
         }
     });
 });
+
+document.getElementById("filtrar").addEventListener("click", function () {
+
+    minPag = document.getElementById("rango-min").value;
+    maxPag = document.getElementById("rango-max").value;
+
+    if ((minPrice != undefined) && (minPrice != "") && (parseInt(minPrice)) >= 0) {
+        minPrice = parseInt(minPrice);
+    }
+    else {
+        minPrice = undefined;
+    }
+
+    if ((maxPrice != undefined) && (minPrice != "") && (parseInt(maxPrice)) >= 0) {
+        maxPrice = parseInt(maxPrice);
+    }
+    else{
+        maxPrice = undefined
+    }
+
+    showJuegos(juegosArray)
+})

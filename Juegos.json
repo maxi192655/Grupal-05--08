@@ -3,7 +3,7 @@
         "id": " : 1",
         "name": " : valorant",
         "pegi": " : +12",
-        "precio": " : gratis!",
+        "precio": " : 0$",
         "imgSrc": "img/Valortan.jpg"
     },
     {
@@ -24,7 +24,7 @@
         "id": " : 4",
         "name": " : League of legend",
         "pegi": " : +15",
-        "precio": " : gratis!",
+        "precio": " : 0$",
         "imgSrc": "img/lolimg.jpg"
     }
 ]
