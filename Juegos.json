@@ -4,7 +4,7 @@
         "name": " : valorant",
         "pegi": " : +12",
         "precio": " : 0",
-        "currency": "$",
+        "currency": "Usd",
         "imgSrc": "img/Valortan.jpg"
     },
     {
@@ -12,7 +12,7 @@
         "name": " : World of Warcraft",
         "pegi": " : +12",
         "precio": " : 1500",
-        "currency": "$",
+        "currency": "Usd",
         "imgSrc": "img/wow.jpg"
     },
     {
@@ -20,7 +20,7 @@
         "name": " : Dead by daylight",
         "pegi": " : +18",
         "precio": " : 600",
-        "currency": "$",
+        "currency": "Usd",
         "imgSrc": "img/dbd.jpg"
     },
     {
@@ -28,7 +28,7 @@
         "name": " : League of legend",
         "pegi": " : +15",
         "precio": " : 0",
-        "currency": "$",
+        "currency": "Usd",
         "imgSrc": "img/lolimg.jpg"
     }
 ]
