@@ -10,7 +10,7 @@ function showJuegos(array) {
         contenido += 'name' + juego.name + '<br>'
         contenido += 'pegi' + juego.pegi + '<br>'
         contenido += 'precio' + juego.precio + '<br>'
-        contenido += 'img' + juego.img + '<br>'
+        contenido += 'img' + juego.imgSrc + '<br>'
         contenido += '<br><hr><br>';
 
         document.getElementById("lista").innerHTML = contenido;
