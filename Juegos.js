@@ -12,11 +12,12 @@ function showJuegos(array) {
         if (((minPrice == undefined) || (minPrice != undefined && parseInt(juego.precio) >= minPrice)) &&
             ((maxPrice == undefined) || (maxPrice != undefined && parseInt(juego.precio) <= maxPrice))) {
 
-            contenido += 'id' + juego.id + '<br>'
-            contenido += 'name' + juego.name + '<br>'
-            contenido += 'pegi' + juego.pegi + '<br>'
-            contenido += 'precio' + juego.precio + '<br>'
-            contenido += 'img' + juego.imgSrc + '<br>'
+            contenido += 'Nombre: ' + juego.id + '<br>'
+            contenido += 'name: ' + juego.name + '<br>'
+            contenido += 'pegi: ' + juego.pegi + '<br>'
+            contenido += 'precio: ' + juego.precio 
+            contenido += + juego.currency + '<br>' 
+            contenido += '<img src="' + juego.imgSrc + '" class="img-thumbnail"/>  <br><br>'
             contenido += '<br><hr><br>';
 
         }
