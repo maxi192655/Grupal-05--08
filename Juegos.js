@@ -9,14 +9,12 @@ function showJuegos(array) {
     for (let i = 0; i < array.length; i++) {
         let juego = array[i];
 
-        if (((minPrice == undefined) || (minPrice != undefined && parseInt(juego.precio) >= minPrice)) &&
-            ((maxPrice == undefined) || (maxPrice != undefined && parseInt(juego.precio) <= maxPrice))) {
+        if (((minPrice == undefined) || (minPrice != undefined && parseInt(juego.precio) >= minPrice)) && ((maxPrice == undefined) || (maxPrice != undefined && parseInt(juego.precio) <= maxPrice))) {
 
             contenido += 'Nombre: ' + juego.id + '<br>'
             contenido += 'name: ' + juego.name + '<br>'
             contenido += 'pegi: ' + juego.pegi + '<br>'
-            contenido += 'precio: ' + juego.precio 
-            contenido += + juego.currency + '<br>' 
+            contenido += 'precio: ' + juego.precio + '<br>'
             contenido += '<img src="' + juego.imgSrc + '" class="img-thumbnail"/>  <br><br>'
             contenido += '<br><hr><br>';
 
@@ -50,12 +48,12 @@ document.getElementById("filtrar").addEventListener("click", function () {
         minPrice = undefined;
     }
 
-    if ((maxPrice != undefined) && (minPrice != "") && (parseInt(maxPrice)) >= 0) {
+    if ((maxPrice != undefined) && (maxPrice != "") && (parseInt(maxPrice)) >= 0) {
         maxPrice = parseInt(maxPrice);
     }
-    else{
+    else {
         maxPrice = undefined
     }
 
     showJuegos(juegosArray)
-})
+});
