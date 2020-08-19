@@ -38,8 +38,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
 document.getElementById("filtrar").addEventListener("click", function () {
 
-    minPag = document.getElementById("rango-min").value;
-    maxPag = document.getElementById("rango-max").value;
+    minPrice = document.getElementById("rango-min").value;
+    maxPrice = document.getElementById("rango-max").value;
 
     if ((minPrice != undefined) && (minPrice != "") && (parseInt(minPrice)) >= 0) {
         minPrice = parseInt(minPrice);
@@ -61,8 +61,8 @@ document.getElementById("filtrar").addEventListener("click", function () {
 document.getElementById("limpiar").addEventListener("click", function () {
     document.getElementById("rango-min").value = "";
     document.getElementById("rango-max").value = "";
-    minAlt = undefined;
-    maxAlt = undefined;
+    minPrice = undefined;
+    maxPrice = undefined;
 
     showJuegos(juegosArray);
 });
