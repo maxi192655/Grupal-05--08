@@ -1,32 +1,32 @@
 [
     {
-        "id": " : 1",
-        "name": " : valorant",
-        "pegi": " : +12",
+        "id": "1",
+        "name": "valorant",
+        "pegi": "+12",
         "precio": "0",
         "currency": "Usd",
         "imgSrc": "img/Valortan.jpg"
     },
     {
-        "id": " : 2",
-        "name": " : World of Warcraft",
-        "pegi": " : +12",
+        "id": "2",
+        "name": "World of Warcraft",
+        "pegi": "+12",
         "precio": "1500",
         "currency": "Usd",
         "imgSrc": "img/wow.jpg"
     },
     {
-        "id": " : 3",
-        "name": " : Dead by daylight",
-        "pegi": " : +18",
+        "id": "3",
+        "name": "Dead by daylight",
+        "pegi": "+18",
         "precio": "600",
         "currency": "Usd",
         "imgSrc": "img/dbd.jpg"
     },
     {
-        "id": " : 4",
-        "name": " : League of legend",
-        "pegi": " : +15",
+        "id": "4",
+        "name": "League of legend",
+        "pegi": "+15",
         "precio": "0",
         "currency": "Usd",
         "imgSrc": "img/lolimg.jpg"
