@@ -9,8 +9,8 @@ function showJuegos(array) {
     for (let i = 0; i < array.length; i++) {
         let juego = array[i];
 
-        if (((minPrice == undefined) || (minPrice != undefined && JSON.parse(juego.precio) >= minPrice))
-            && ((maxPrice == undefined) || (maxPrice != undefined && JSON.parse(juego.precio) <= maxPrice))) {
+        if (((minPrice == undefined) || (minPrice != undefined && parseInt(juego.precio) >= minPrice))
+            && ((maxPrice == undefined) || (maxPrice != undefined && parseInt(juego.precio) <= maxPrice))) {
 
             contenido += 'Nombre: ' + juego.name + '<br>'
             contenido += 'pegi: ' + juego.pegi + '<br>'
