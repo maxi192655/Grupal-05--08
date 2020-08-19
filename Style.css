@@ -1,10 +1,15 @@
-h1{
-    text-align: center;
-    font-size: 2,5em;
-    color: red;
+.signin, #Listado {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    margin: auto;
+    background-color: beige;
+    border: 1px black solid; 
+  }
+
+.invalid{
+  background-color: red;
 }
-div#principal{
-    font-size: 1.5em;
-    text-align: justify ;
-    background-color: sienna;
+h1{
+  text-justify: auto;
 }

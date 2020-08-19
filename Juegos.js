@@ -9,7 +9,8 @@ function showJuegos(array) {
     for (let i = 0; i < array.length; i++) {
         let juego = array[i];
 
-        if (((minPrice == undefined) || (minPrice != undefined && parseInt(juego.precio) >= minPrice)) && ((maxPrice == undefined) || (maxPrice != undefined && parseInt(juego.precio) <= maxPrice))) {
+        if (((minPrice == undefined) || (minPrice != undefined && JSON.parse(juego.precio) >= minPrice))
+            && ((maxPrice == undefined) || (maxPrice != undefined && JSON.parse(juego.precio) <= maxPrice))) {
 
             contenido += 'Nombre: ' + juego.id + '<br>'
             contenido += 'name: ' + juego.name + '<br>'
@@ -22,7 +23,7 @@ function showJuegos(array) {
 
 
 
-        document.getElementById("lista").innerHTML = contenido;
+        document.getElementById("Listado").innerHTML = contenido;
     }
 }
 
@@ -56,4 +57,13 @@ document.getElementById("filtrar").addEventListener("click", function () {
     }
 
     showJuegos(juegosArray)
+});
+
+document.getElementById("limpiar").addEventListener("click", function () {
+    document.getElementById("rango-min").value = "";
+    document.getElementById("rango-max").value = "";
+    minAlt = undefined;
+    maxAlt = undefined;
+
+    showJuegos(juegosArray);
 });

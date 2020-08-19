@@ -1,5 +1,5 @@
 const juegos_URL = "https://maxi192655.github.io/Grupal-05--08/Juegos.json";
-const user_URL ="https://danielk2020.github.io/biblioteca/usuarios.json"
+const USUARIOS_URL ="https://danielk2020.github.io/biblioteca/usuarios.json"
 
 var getJSONData = function (url) {
     var result = {};
@@ -22,3 +22,20 @@ var getJSONData = function (url) {
             return result;
         });
 }
+
+document.addEventListener("DOMContentLoaded", function(e) {
+    let userLogged = localStorage.getItem('User-Logged');
+    let infoUser = document.getElementById("info-user");
+    let user = document.getElementById("user");
+
+    if(userLogged){
+        userLogged = JSON.parse(userLogged);
+        user.innerText = user.innerText + 'Usuario logueado: ' + userLogged.email;
+        infoUser.style = "display: inline-block";
+    }
+
+    document.getElementById("salir").addEventListener("click", function(e){
+        localStorage.removeItem('User-logged');
+        window.location = 'login.html';
+    })
+})
