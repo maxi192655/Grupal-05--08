@@ -12,8 +12,7 @@ function showJuegos(array) {
         if (((minPrice == undefined) || (minPrice != undefined && JSON.parse(juego.precio) >= minPrice))
             && ((maxPrice == undefined) || (maxPrice != undefined && JSON.parse(juego.precio) <= maxPrice))) {
 
-            contenido += 'Nombre: ' + juego.id + '<br>'
-            contenido += 'name: ' + juego.name + '<br>'
+            contenido += 'Nombre: ' + juego.name + '<br>'
             contenido += 'pegi: ' + juego.pegi + '<br>'
             contenido += 'precio: ' + juego.precio + '<br>'
             contenido += '<img src="' + juego.imgSrc + '" class="img-thumbnail"/>  <br><br>'
