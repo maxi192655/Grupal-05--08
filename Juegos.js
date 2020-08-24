@@ -1,7 +1,38 @@
-var juegosArray = [];
+const ORDER_ASC_BY_PRECIO = "0 => 5000";
+const ORDER_DESC_BY_PRECIO = "5000 <= 0";
+const ORDER_DESC_BY_ID = "ID -> id";
 
+var juegosArray = [];
 var minPrice = undefined;
 var maxPrice = undefined;
+
+function sortPrecio(criterio, array) {
+    let result = [];
+
+    if (criterio === ORDER_ASC_BY_PRECIO) {
+        result = array.sort(function (a, b) {
+            if (a.precio < b.precio) { return -1; }
+            if (a.precio > b.precio) { return 1; }
+            return 0;
+        });
+
+    } else if (criterio === ORDER_DESC_BY_PRECIO) {
+        result = array.sort(function (a, b) {
+            if (a.precio > b.precio) { return -1; }
+            if (a.precio < b.precio) { return 1; }
+            return 0;
+        });
+
+    } else if (criterio === ORDER_DESC_BY_ID) {
+        result = array.sort(function (a, b) {
+            if (a.id > b.id) { return -1; }
+            if (a.id < b.id) { return 1; }
+            return 0;
+        });
+    }
+
+    return result;
+}
 
 function showJuegos(array) {
 
@@ -31,9 +62,32 @@ document.addEventListener("DOMContentLoaded", function (e) {
     getJSONData(juegos_URL).then(function (resultObj) {
         if (resultObj.status === "ok") {
             juegosArray = resultObj.data;
+
+
+            juegosArray = sortPrecio(ORDER_ASC_BY_PRECIO, juegosArray)
+
+
             showJuegos(juegosArray);
         }
     });
+});
+
+document.getElementById("sortPriceAsc").addEventListener("click", function () {
+    juegosArray = sortPrecio(ORDER_ASC_BY_PRECIO, juegosArray)
+
+    showJuegos(juegosArray);
+});
+
+document.getElementById("sortPriceDesc").addEventListener("click", function () {
+    juegosArray = sortPrecio(ORDER_DESC_BY_PRECIO, juegosArray)
+
+    showJuegos(juegosArray);
+});
+
+document.getElementById("sortIdDesc").addEventListener("click", function () {
+    juegosArray = sortPrecio(ORDER_DESC_BY_ID, juegosArray)
+
+    showJuegos(juegosArray);
 });
 
 document.getElementById("filtrar").addEventListener("click", function () {
